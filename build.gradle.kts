@@ -1,11 +1,11 @@
 plugins {
     id("java")
-    id("org.jetbrains.intellij") version "1.16.1"
+    id("org.jetbrains.intellij") version "1.17.4"
 }
 //val buildType = "231"
 val buildType = "default"
 val version231 = "0.3.231-beta"
-val versionDefault = "0.4.1"
+val versionDefault = "0.5.0"
 
 
 group = "org.btik"
@@ -35,7 +35,7 @@ intellij {
             )
         )
     } else {
-        version.set("2024.2")
+        version.set("2024.3")
         plugins.set(
             listOf(
                 "com.intellij.cidr.base",
@@ -69,7 +69,7 @@ tasks {
             untilBuild.set("231.*")
         } else {
             sinceBuild.set("242")
-            untilBuild.set("242.*")
+            untilBuild.set("243.*")
         }
         changeNotes.set(
             """
